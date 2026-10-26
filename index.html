@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iStore | Loja de iPhones</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="topo">
+      <a href="#inicio" class="logo">iStore</a>
+      <button id="btn-menu">&#9776;</button>
+      <nav id="menu" class="menu">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#vitrine">Produtos</a></li>
+          <li><a href="#frete">Frete</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="destaque">
+      <h1>Todos os iPhones em um só lugar</h1>
+      <p>Do iPhone 14 ao iPhone 16 Pro Max, com entrega para todo o Brasil.</p>
+      <a href="#vitrine" class="botao">Ver produtos</a>
+    </section>
+
+    <section id="vitrine">
+      <h2>Nossos iPhones</h2>
+      <p style="text-align:center; margin-bottom:15px;">Escolha o modelo que combina com você.</p>
+
+      <div class="vitrine">
+
+        <article class="produto">
+          <img src="img/iphone-14.svg" alt="iPhone 14 na cor azul, visto por trás">
+          <h3>iPhone 14</h3>
+          <p>128 GB, câmera dupla e tela de 6,1 polegadas.</p>
+          <p class="preco">R$ 4.499,00</p>
+          <a href="#frete" class="botao">Comprar</a>
+        </article>
+
+        <article class="produto">
+          <img src="img/iphone-15.svg" alt="iPhone 15 na cor rosa, visto por trás">
+          <h3>iPhone 15</h3>
+          <p>128 GB, Dynamic Island e entrada USB-C.</p>
+          <p class="preco">R$ 5.299,00</p>
+          <a href="#frete" class="botao">Comprar</a>
+        </article>
+
+        <article class="produto">
+          <img src="img/iphone-15-pro.svg" alt="iPhone 15 Pro em titânio natural, visto por trás">
+          <h3>iPhone 15 Pro</h3>
+          <p>256 GB, corpo de titânio e câmera tripla.</p>
+          <p class="preco">R$ 7.299,00</p>
+          <a href="#frete" class="botao">Comprar</a>
+        </article>
+
+        <article class="produto">
+          <img src="img/iphone-15-pro-max.svg" alt="iPhone 15 Pro Max em titânio azul, visto por trás">
+          <h3>iPhone 15 Pro Max</h3>
+          <p>256 GB, tela de 6,7 polegadas e zoom óptico 5x.</p>
+          <p class="preco">R$ 8.299,00</p>
+          <a href="#frete" class="botao">Comprar</a>
+        </article>
+
+        <article class="produto">
+          <img src="img/iphone-16.svg" alt="iPhone 16 na cor ultramarino, visto por trás">
+          <h3>iPhone 16</h3>
+          <p>128 GB, chip A18 e botão de controle da câmera.</p>
+          <p class="preco">R$ 5.999,00</p>
+          <a href="#frete" class="botao">Comprar</a>
+        </article>
+
+        <article class="produto">
+          <img src="img/iphone-16-pro.svg" alt="iPhone 16 Pro em titânio deserto, visto por trás">
+          <h3>iPhone 16 Pro</h3>
+          <p>256 GB, tela de 6,3 polegadas e câmera tripla.</p>
+          <p class="preco">R$ 8.499,00</p>
+          <a href="#frete" class="botao">Comprar</a>
+        </article>
+
+        <article class="produto">
+          <img src="img/iphone-16-pro-max.svg" alt="iPhone 16 Pro Max em titânio preto, visto por trás">
+          <h3>iPhone 16 Pro Max</h3>
+          <p>256 GB, tela de 6,9 polegadas e a maior bateria da linha.</p>
+          <p class="preco">R$ 9.499,00</p>
+          <a href="#frete" class="botao">Comprar</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="frete" class="cinza">
+      <h2>Calcule o frete</h2>
+      <p style="text-align:center; margin-bottom:15px;">Frete grátis em produtos a partir de R$ 7.000,00.</p>
+
+      <div class="formulario">
+        <label for="produto">Produto</label>
+        <select id="produto">
+          <option value="4499">iPhone 14 - R$ 4.499,00</option>
+          <option value="5299">iPhone 15 - R$ 5.299,00</option>
+          <option value="7299">iPhone 15 Pro - R$ 7.299,00</option>
+          <option value="8299">iPhone 15 Pro Max - R$ 8.299,00</option>
+          <option value="5999">iPhone 16 - R$ 5.999,00</option>
+          <option value="8499">iPhone 16 Pro - R$ 8.499,00</option>
+          <option value="9499">iPhone 16 Pro Max - R$ 9.499,00</option>
+        </select>
+
+        <label for="cep">CEP (somente números)</label>
+        <input type="text" id="cep" maxlength="8" placeholder="88100000">
+
+        <button type="button" id="btn-frete" class="botao">Calcular frete</button>
+        <p id="resultado-frete" class="resultado"></p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Fale com a gente</h2>
+      <p style="text-align:center; margin-bottom:15px;">Tem alguma dúvida? Envie uma mensagem.</p>
+
+      <form id="form-contato" class="formulario">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome completo">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="voce@email.com">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required minlength="10" placeholder="Escreva sua mensagem"></textarea>
+
+        <button type="submit" class="botao">Enviar mensagem</button>
+        <p id="resultado-form" class="resultado"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 iStore. Projeto acadêmico, os produtos e preços são fictícios.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
